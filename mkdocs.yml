@@ -1,0 +1,120 @@
+# Project information
+site_name: AI-LAB Documentation
+site_author: CLAAUDIA, ITS, Aalborg University
+site_description: Documentation for AI-LAB, a powerful computing platform available to students at Aalborg University, designed to support intensive computational tasks, particularly those involving machine learning.
+
+# Copyright
+copyright: Copyright &copy; 2024 CLAAUDIA
+
+nav:
+  - Home: index.md
+  - Getting started:
+    - Before you begin: getting-started/before-you-begin.md
+    - Login: getting-started/login.md
+    - File management: getting-started/file-management.md
+    - Getting applications: getting-started/getting-applications.md
+    - Running jobs: getting-started/running-jobs.md
+    - Next steps: getting-started/next-steps.md
+  - Applications:
+    - Ollama and LLM: applications/ollama-and-llm.md
+    - MATLAB: applications/matlab.md
+    - TensorFlow: applications/tensorflow.md
+    - PyTorch: applications/pytorch.md
+    - ImageMagick: applications/imagemagick.md
+  - Additional guides:
+    - Monitoring commands:
+      - Checking the queue: additional-guides/checking-the-queue.md
+      - Checking the status of compute nodes: additional-guides/checking-the-status-of-compute-nodes.md
+      - Checking GPU usage: additional-guides/checking-gpu-usage.md
+    - Slurm arguments:
+      - CPU, GPU, and memory allocation: additional-guides/cpu-gpu-and-memory-allocation.md
+      - Setting a time limit: additional-guides/setting-a-time-limit.md
+      - Cancelling jobs: additional-guides/cancelling-jobs.md
+    - Container guides:
+      - Building your own container image: additional-guides/building-your-own-container-image.md
+      - Download container images: additional-guides/download-container-images.md
+      - Adding python packages via virtual environment: additional-guides/adding-python-packages-via-virtual-environment.md
+      - Creating a conda environment: additional-guides/creating-a-conda-environment.md
+    - Running jobs:
+      - Running a container in interactive mode: additional-guides/running-a-container-in-interactive-mode.md
+      - Run a bash script: additional-guides/run-a-bash-script.md
+      - Multiple GPUs with PyTorch: additional-guides/multiple-gpus-with-pytorch.md
+    - Checkpointing: additional-guides/checkpointing.md
+  - System overview:
+    - Hardware: system-overview/hardware.md
+    - Software: system-overview/software.md
+    - Storage: system-overview/storage.md
+  - Courses:
+    - Empty for now: courses/empty-for-now.md
+  - Help & resources:
+    - Support: help-and-resources/support.md
+    - Guidelines: help-and-resources/guidelines.md
+    - Known issues:  help-and-resources/known-issues.md
+    - Glossery:  help-and-resources/glossery.md
+    - Terminal basics: help-and-resources/terminal-basics.md
+    - For lecturers:
+      - Adding a course: help-and-resources/for-lecturers/adding-a-course.md
+      - Page design guide: help-and-resources/for-lecturers/page-design-guide.md      
+    
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - navigation.instant
+    - navigation.footer
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - content.code.copy
+    - content.code.annotate
+
+  logo: assets/img/aau-logo-512x512.png
+  favicon: assets/favicon.ico
+
+  font:
+    text: barlow
+ 
+  language: en
+
+  icon:
+    annotation: material/plus-circle
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/conditional.js
+
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.critic
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.caret
+  - pymdownx.tilde
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - def_list
+  - admonition
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/claaudia/
+      name: Claaudia on LinkedIn
+
+    - icon: fontawesome/solid/globe
+      link: https://www.researcher.aau.dk/contact/claaudia
